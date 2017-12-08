@@ -1,2 +1,4 @@
 # g52swm-cw2
-Coursework Name: Maintaining and evolving existing software Weight: 50% Deliverable: Git activity Code additions and changes
+Coursework Name: Maintaining and evolving existing software 
+Deliverable: Git activity, Code additions and changes
+Weight: 50% 
