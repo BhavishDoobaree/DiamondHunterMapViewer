@@ -18,7 +18,7 @@ public class MainMenuController {
 
 	@FXML
 	public void rungame(ActionEvent event) {
-		System.out.println("built");
+		System.out.println("buillt");
 		dhdiag = new JFrame("Diamond Hunter");	
 		
 		dhdiag.add(new GamePanel());

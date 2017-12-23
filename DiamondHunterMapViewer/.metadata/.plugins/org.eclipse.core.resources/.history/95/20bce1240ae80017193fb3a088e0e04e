@@ -13,34 +13,35 @@ import javafx.stage.Stage;
 public class MainMenuController {
 	
 	Stage primaryStage= new Stage();
-	private static JFrame dhdiag;
+	private static JFrame window;
 
-
+	
+	// Event Listener on Button.onAction
 	@FXML
 	public void rungame(ActionEvent event) {
-		System.out.println("built");
-		dhdiag = new JFrame("Diamond Hunter");	
+		System.out.println("Run game clicked");
+		window = new JFrame("Diamond Hunter");	
 		
-		dhdiag.add(new GamePanel());
+		window.add(new GamePanel());
 		
-		dhdiag.setResizable(false);
-		dhdiag.pack();
+		window.setResizable(false);
+		window.pack();
 		
-		dhdiag.setLocationRelativeTo(null);
-		dhdiag.setVisible(true);
-		dhdiag.setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
+		window.setLocationRelativeTo(null);
+		window.setVisible(true);
+		window.setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
 
 	}
 	
 	public static JFrame getWindow(){
-		return dhdiag;
+		return window;
 	}
 	
 	@FXML
 	public void mapviewer() throws Exception{
 		
 		Parent root = FXMLLoader.load(getClass().getResource("../MapViewerController/GUILayout.fxml"));
-        primaryStage.setTitle("Map Editor");        
+        primaryStage.setTitle("Edit Map");        
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
