@@ -1,0 +1,21 @@
+package com.neet.DiamondHunter.MapViewer;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import javafx.fxml.Initializable;
+
+
+public class GUIController implements Initializable{
+
+	@Override
+	public void initialize(URL loc, ResourceBundle res) {
+		// TODO Auto-generated method stub
+		
+		
+		
+	}
+
+	
+	
+}
