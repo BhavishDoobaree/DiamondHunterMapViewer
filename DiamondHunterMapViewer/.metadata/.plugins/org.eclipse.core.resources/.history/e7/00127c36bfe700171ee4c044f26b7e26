@@ -29,14 +29,14 @@ public class GUIController implements Initializable{
     boolean boolboat=true,boolaxe=true;
 
     private int[][] map;
-    private int sizeTile=16;
-    private int rowNum;
-    private int colNum;
+    private int tileSize=16;
+    private int numRows;
+    private int numCols;
 
     private Image[][] tiles;
     private Image[] item;
     public Image image;
-    private int horiTileNum;
+    private int numTilesAcross;
 
     @FXML
     public Canvas canvas;
@@ -239,11 +239,11 @@ public class GUIController implements Initializable{
         for (int col = 0; col < 2; col++) {
             item[col] = new WritableImage(
                     setTile.getPixelReader(),
-                    col * sizeTile,
+                    col * tileSize,
                     16,
 
-                    sizeTile,
-                    sizeTile);
+                    tileSize,
+                    tileSize);
         }
     }
     public void initT(String s) {
@@ -251,22 +251,22 @@ public class GUIController implements Initializable{
         try {
 
             Image setTile=new Image(s);
-            horiTileNum = (int) setTile.getWidth() / sizeTile;
-            tiles = new Image[2][horiTileNum];
+            numTilesAcross = (int) setTile.getWidth() / tileSize;
+            tiles = new Image[2][numTilesAcross];
 
-            for(int col = 0; col < horiTileNum; col++) {
+            for(int col = 0; col < numTilesAcross; col++) {
                 tiles[0][col] = new WritableImage(
                         setTile.getPixelReader(),
-                        col * sizeTile,
+                        col * tileSize,
                         0,
-                        sizeTile,
-                        sizeTile);
+                        tileSize,
+                        tileSize);
                 tiles[1][col] = new WritableImage(
                         setTile.getPixelReader(),
-                        col * sizeTile,
-                        sizeTile,
-                        sizeTile,
-                        sizeTile);
+                        col * tileSize,
+                        tileSize,
+                        tileSize,
+                        tileSize);
             }
 
         }
@@ -284,15 +284,15 @@ public class GUIController implements Initializable{
                     new InputStreamReader(in)
             );
 
-            colNum = Integer.parseInt(br.readLine());
-            rowNum = Integer.parseInt(br.readLine());
-            map = new int[rowNum][colNum];
+            numCols = Integer.parseInt(br.readLine());
+            numRows = Integer.parseInt(br.readLine());
+            map = new int[numRows][numCols];
 
             String delims = "\\s+";
-            for(int row = 0; row < rowNum; row++) {
+            for(int row = 0; row < numRows; row++) {
                 String line = br.readLine();
                 String[] tokens = line.split(delims);
-                for(int col = 0; col < colNum; col++) {
+                for(int col = 0; col < numCols; col++) {
                     map[row][col] = Integer.parseInt(tokens[col]);
                 }
             }
@@ -303,25 +303,25 @@ public class GUIController implements Initializable{
         }
 
     }
-    public void draw(GraphicsContext draw2) {
+    public void draw(GraphicsContext g) {
 
-        for(int row = 0; row < 40; row++) { //out of bounds prevention
+        for(int row = 0; row < 40; row++) {
 
-            if(row >= rowNum) break;
+            if(row >= numRows) break;
 
             for(int col = 0; col < 40; col++) {
 
-                if(col >= colNum) break;
+                if(col >= numCols) break;
                 if(map[row][col] == 0) continue;
 
                 int rc = map[row][col];
-                int r = rc / horiTileNum;
-                int c = rc % horiTileNum;
+                int r = rc / numTilesAcross;
+                int c = rc % numTilesAcross;
 
-                draw2.drawImage(
+                g.drawImage(
                         tiles[r][c],
-                        col * sizeTile,
-                        row * sizeTile
+                        col * tileSize,
+                        row * tileSize
                 );
 
             }
@@ -329,6 +329,8 @@ public class GUIController implements Initializable{
         }
 
     }
+
+    //////////////////////////////////////////////////
 
     
 }
