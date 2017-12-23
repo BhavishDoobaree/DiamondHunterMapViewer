@@ -1,0 +1,10 @@
+package com.neet.DiamondHunter.ErrorHandlingMapView;
+
+public class AlertDiag {
+	
+	//alert message display. invoked whenever needed
+	//used by: invalid user input
+	
+	
+
+}
