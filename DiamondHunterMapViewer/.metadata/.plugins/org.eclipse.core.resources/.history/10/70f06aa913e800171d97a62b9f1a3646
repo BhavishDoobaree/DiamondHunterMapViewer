@@ -30,7 +30,7 @@ public class GUIController implements Initializable{
 	private Image[] item;
 	private Image[][] tile;
 	private int axeXreal=26, axeYreal=37,boatXreal=12, boatYreal=4;
-	public static int boatCY = 416,boatCX = 592, axeCY = 192, axeCX = 64; //Change me to adapt to real program
+	public static int boatCY = 2,boatCX = 2, axeCY = 2, axeCX = 2; //Change me to adapt to real program
 	int select = 0;
 	private int rowNum, colsNum, tilesAcr;
 	private int sizeT=16;
