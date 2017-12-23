@@ -7,9 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.*?>
 
-
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="950.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.neet.DiamondHunter.MapViewerController.GUIController.java">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="950.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.neet.DiamondHunter.MapViewerController.GUIController">
   <!-- TODO Add Nodes -->
   <children>
     <Canvas id="canvas" height="640.0" layoutX="6.0" layoutY="18.0" scaleX="1.0194884574165541" scaleY="0.9609375" width="640.0" />

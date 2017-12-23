@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="375.0" prefWidth="577.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.neet.DiamondHunter.Main.MainMenuController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Text layoutX="233.0" layoutY="72.0" scaleX="1.6414257041399236" scaleY="2.904650024473813" strokeType="OUTSIDE" strokeWidth="0.0" text="Diamond Hunter" />
+    <Button layoutX="240.0" layoutY="161.0" mnemonicParsing="false" text="Play Game" />
+    <Button layoutX="238.0" layoutY="228.0" mnemonicParsing="false" text="Map Editor" />
+  </children>
+</AnchorPane>

@@ -1,0 +1,6 @@
+package com.neet.DiamondHunter.MapMain;
+
+public class Snippet {
+	public AnchorPage rootLayout;
+}
+
