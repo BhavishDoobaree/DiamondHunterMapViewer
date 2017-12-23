@@ -1,0 +1,31 @@
+package com.neet.DiamondHunter.MapViewer;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import javafx.fxml.Initializable;
+
+//main controller
+//map view location increased by 16 -> 640/40 = 16
+
+public class GUIController implements Initializable{
+
+	
+	//variables declaration here
+	
+	
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		// TODO Auto-generated method stub
+		
+		//getting initial graphics
+		
+		
+	}
+	
+	
+    
+	
+	
+}
+

@@ -1,0 +1,80 @@
+package com.neet.DiamondHunter.MapViewer;
+
+import javafx.event.EventHandler;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.Scene;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.WritableImage;
+import javafx.stage.Stage;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+//main controller
+//map view location increased by 16 -> 640/40 = 16
+
+public class GUIController implements Initializable{
+
+	
+	//variables declaration here
+	private Image[] item;
+	public static int boatCY = 2,boatCX = 2; //Change me to adapt to real program
+	
+	
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		// TODO Auto-generated method stub
+		
+		//getting initial graphics
+		GraphicsContext graphics1 = canvasfxml.getGraphicsContext2D();
+		ResTiles("/Tilesets/testtileset.gif");  //loading of giving resources
+		ResMap("/Sprites/items.gif");
+		ResItem("/Maps/testmap.map");
+		
+		//draw map and place items
+		generategraphics(graphics1);
+		graphics1.drawImage(item[0],boatCY, boatCX);
+		
+		
+		
+	}
+
+	private void ResItem(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void ResMap(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void ResTiles(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void generategraphics(GraphicsContext graphics1) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	//FXML declarations here
+	@FXML 
+	public Canvas canvasfxml;
+	
+	
+    
+	
+	
+}
+

@@ -176,19 +176,11 @@ public class GUIController implements Initializable{
 							
 							
 							savemap.setTitle("Map Changes Made");
-							savemap.setContentText("The following changes have been made.\nAxe = ("+axeCX/16+","+axeCY/16+")"+"\nBoat = ("+boatCX+","+boatCY+")"+"\n Click on exit and the run game");
+							savemap.setContextText("The following changes have been made.\nAxe = ("+axeCX/16+","+axeCY/16+")"+"\nBoat = ("+boatCX+","+boatCY+")"+"\n Click on exit and the run game");
 							savemap.showAndWait();
 							
-						}catch(exception excp){
-							//exception handler here
-							Alerts.display("Alert",excp.message);
-						}
+						}catch
 						
-						
-					}
-
-					private void checkposition(int axeYreal, int axeXreal, int boatYreal, int boatXreal) {
-						// TODO Auto-generated method stub
 						
 					}
 					
