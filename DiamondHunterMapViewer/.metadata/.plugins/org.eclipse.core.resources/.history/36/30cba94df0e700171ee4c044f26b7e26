@@ -33,14 +33,12 @@ public class GUIController implements Initializable{
 	int select = 0;
 	boolean set_boat=true, set_axe=true;
 	
-	
 	Alert savemap = new Alert(Alert.AlertType.INFORMATION);
 	
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
-		
 		
 		//getting initial graphics
 		GraphicsContext graphics1 = canvasfxml.getGraphicsContext2D();
@@ -181,9 +179,9 @@ public class GUIController implements Initializable{
 							savemap.setContentText("The following changes have been made.\nAxe = ("+axeCX/16+","+axeCY/16+")"+"\nBoat = ("+boatCX+","+boatCY+")"+"\n Click on exit and the run game");
 							savemap.showAndWait();
 							
-						}catch(ExceptionHandler excp){
-							Alerts.display("Alert",excp.excptxt);
-							
+						}catch(exception excp){
+							//exception handler here
+							Alerts.display("Alert",excp.message);
 						}
 						
 						

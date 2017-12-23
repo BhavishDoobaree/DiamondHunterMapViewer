@@ -182,7 +182,7 @@ public class GUIController implements Initializable{
 							savemap.showAndWait();
 							
 						}catch(ExceptionHandler excp){
-							Alerts.display("Alert",excp.excptxt);
+							Alerts.display("Alert",excp.message);
 							
 						}
 						
