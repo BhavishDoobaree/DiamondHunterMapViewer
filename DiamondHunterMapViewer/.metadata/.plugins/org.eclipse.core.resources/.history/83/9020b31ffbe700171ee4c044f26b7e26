@@ -1,0 +1,26 @@
+package com.neet.DiamondHunter.MapViewer;
+
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.stage.Stage;
+
+public class MapEditor extends Application{
+	
+	public static void main(String[] args){
+		Application.launch();
+	}
+
+	@Override
+	public void start(Stage arg0) throws Exception {
+		// TODO Auto-generated method stub
+		Parent app = FXMLLoader.load(getClass().getResource(GUILayout.fxml));
+		arg0.setTitle("Diamond Hunter Map Editor");
+		arg0.setScene(new Scene(app, 950, 650));
+		arg0.setResizable(true);
+		arg0.show();
+		
+	} //this is the main class. run me to get access to tile map editor
+
+	
+}

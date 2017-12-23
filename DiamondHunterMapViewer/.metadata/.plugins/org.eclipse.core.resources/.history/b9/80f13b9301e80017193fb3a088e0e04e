@@ -1,0 +1,29 @@
+package com.neet.DiamondHunter.MapMain;
+
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+
+public class MapEditor extends Application{
+	
+	@Override
+	   public void start(Stage stage) throws Exception {
+		AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getClassLoader().getResource("C:/Users/Bhavish Doobaree/Desktop/UNMC/SWM/CW2/MapViewerCodes/GitHubRepo/g52swm-cw2-group11/DiamondHunterMapViewer/DiamondHunterMapViewer/src/com/neet/DiamondHunter/MapViewerController/GUILayout.fxml"));
+
+	    Scene scene = new Scene(root);
+
+	    stage.setScene(scene);
+	    stage.setTitle("Diamond Hunter Map Editor");
+	    stage.show();
+	}
+
+	
+	public static void main(String[] args) {
+	    launch(args);
+	} //this is the main class. run me to get access to tile map editor
+
+	
+}

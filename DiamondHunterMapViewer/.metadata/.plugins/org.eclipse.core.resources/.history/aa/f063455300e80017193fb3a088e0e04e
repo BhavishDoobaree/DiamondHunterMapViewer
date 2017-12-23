@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="950.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Canvas id="canvas" height="640.0" layoutX="6.0" layoutY="18.0" scaleX="1.0194884574165541" scaleY="0.9609375" width="640.0" />
+    <Button layoutX="790.0" layoutY="145.0" mnemonicParsing="false" prefWidth="127.0" text="Set Axe" />
+    <Button layoutX="790.0" layoutY="255.0" mnemonicParsing="false" prefWidth="127.0" text="Set Boat" />
+    <Button layoutX="750.0" layoutY="576.0" mnemonicParsing="false" text="Save" />
+    <Button layoutX="845.0" layoutY="576.0" mnemonicParsing="false" text="Exit" />
+    <Text layoutX="779.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X:" />
+    <Text layoutX="856.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Y:" />
+    <TextField layoutX="799.0" layoutY="193.0" prefWidth="30.0" />
+    <TextField layoutX="880.0" layoutY="193.0" prefWidth="30.0" />
+    <Text layoutX="778.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X:" />
+    <Text layoutX="855.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Y:" />
+    <TextField layoutX="798.0" layoutY="308.0" prefWidth="30.0" />
+    <TextField layoutX="879.0" layoutY="308.0" prefWidth="30.0" />
+    <Text fontSmoothingType="LCD" layoutX="660.0" layoutY="90.0" scaleX="0.7510224438902743" scaleY="1.0" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="Diamond Hunter Map Editor">
+      <font>
+        <Font size="25.0" />
+      </font>
+    </Text>
+  </children>
+</AnchorPane>
