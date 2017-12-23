@@ -28,11 +28,9 @@ public class GUIController implements Initializable{
 	
 	//variables declaration here
 	private Image[] item;
-	private Image[][] tile;
 	private int axeXreal=26, axeYreal=37,boatXreal=12, boatYreal=4;
 	public static int boatCY = 2,boatCX = 2, axeCY = 2, axeCX = 2; //Change me to adapt to real program
 	int select = 0;
-	private int rowNum, colsNum, tilesAcr;
 	private int sizeT=16;
 	boolean set_boat=true, set_axe=true;
 	private int[][] map;
@@ -238,76 +236,17 @@ public class GUIController implements Initializable{
 
 	private void ResMap(String string) {
 		// TODO Auto-generated method stub
-		  try {
-
-	            InputStream in = getClass().getResourceAsStream(string);
-	            BufferedReader br = new BufferedReader(
-	                    new InputStreamReader(in)
-	            );
-
-	            colsNum = Integer.parseInt(br.readLine());
-	            rowNum = Integer.parseInt(br.readLine());
-	            map = new int[rowNum][colsNum];
-
-	            String delims = "\\s+"; //regex expression
-	            for(int row = 0; row < rowNum; row++) {
-	                String line = br.readLine();
-	                String[] tokens = line.split(delims);
-	                for(int col = 0; col < colsNum; col++) {
-	                    map[row][col] = Integer.parseInt(tokens[col]);
-	                }
-	            }
-
-	        }
-	        catch(Exception expt) { 
-	            expt.printStackTrace();
-	        }
+		
 	}
 
 	private void ResTiles(String string) {
 		// TODO Auto-generated method stub
-		try {
-
-            Image setTile=new Image(string);
-            tilesAcr = (int) setTile.getWidth() / sizeT;
-            tile = new Image[2][tilesAcr];
-
-            for(int y = 0; y < tilesAcr; y++) {
-                tile[0][y] = new WritableImage(
-                        setTile.getPixelReader(),
-                        y * sizeT,
-                        0,
-                        sizeT,
-                        sizeT);
-                tile[1][y] = new WritableImage(
-                        setTile.getPixelReader(),
-                        y * sizeT,
-                        sizeT,
-                        sizeT,
-                        sizeT);
-            }
-
-        }
-        catch(Exception e) {
-            e.printStackTrace();
-        }
+		
 	}
 
 	private void generategraphics(GraphicsContext graphics1) {
 		// TODO Auto-generated method stub
-		for(int tilerow = 0; tilerow < 40; tilerow++){
-			if (tilerow >= rowNum) break;
-			for (int z=0;z<40;z++){
-				if (z>=colsNum) break;
-				if(map[tilerow][z]==0) continue;
-				
-				int rowcol = map[tilerow][z];
-				int row = rowcol / tilesAcr;
-				int col = rowcol % tilesAcr;
-				
-				graphics1.drawImage(tile[row][col], col * sizeT, row * sizeT);
-			}
-		}
+		
 	}
 
 	//FXML declarations here

@@ -28,14 +28,10 @@ public class GUIController implements Initializable{
 	
 	//variables declaration here
 	private Image[] item;
-	private Image[][] tile;
 	private int axeXreal=26, axeYreal=37,boatXreal=12, boatYreal=4;
 	public static int boatCY = 2,boatCX = 2, axeCY = 2, axeCX = 2; //Change me to adapt to real program
 	int select = 0;
-	private int rowNum, colsNum, tilesAcr;
-	private int sizeT=16;
 	boolean set_boat=true, set_axe=true;
-	private int[][] map;
 	
 	
 	Alert savemap = new Alert(Alert.AlertType.INFORMATION);
@@ -185,30 +181,17 @@ public class GUIController implements Initializable{
 							savemap.setContentText("The following changes have been made.\nAxe = ("+axeCX/16+","+axeCY/16+")"+"\nBoat = ("+boatCX+","+boatCY+")"+"\n Click on exit and the run game");
 							savemap.showAndWait();
 							
-						}catch(ExceptionHandler excptxt){
-							GenerateAlert.show("Alert", excptxt.excptxt);
+						}catch(ExceptionHandler excp){
+				
+						 GenerateAlert.show("Alert",excp.excptxt);
+							
 						}
 						
 						
 					}
 
-					private void checkposition(int axeYreal, int axeXreal, int boatYreal, int boatXreal) throws ExceptionHandler {
+					private void checkposition(int axeYreal, int axeXreal, int boatYreal, int boatXreal) {
 						// TODO Auto-generated method stub
-						if((axeXreal*16)==axeCX && (axeYreal*16)==axeCY && (boatXreal*16)==boatCX &&(boatYreal*16)==boatCY){
-							throw new ExceptionHandler("No changes detected.");
-						}
-						if(map[axeYreal][axeXreal] == 20 || map[axeYreal][axeXreal]==21){
-		                    throw new ExceptionHandler("Position taken by tree. Reposition the axe.");
-		                }
-		                if(map[axeYreal][axeXreal]==22){
-		                    throw new ExceptionHandler("Position taken by water. Reposition the axe.");
-		                }
-		                if(map[boatYreal][boatXreal] == 20 || map[boatYreal][boatXreal]==21){
-		                    throw new ExceptionHandler("Postion taken by tree. Reposition the boat.");
-		                }
-		                if(map[boatYreal][boatXreal]==22){
-		                    throw new ExceptionHandler("Position taken by water. Reposition the boat.");
-		                }
 						
 					}
 					
@@ -217,97 +200,25 @@ public class GUIController implements Initializable{
 				
 				);
 	}
-	@FXML
-	public void exit() throws Exception{
-		Scene scene = exitButton.getScene();
-		Stage current = (Stage)scene.getWindow();
-		current.hide();
-	}
 
-	//get images from resources
-	
 	private void ResItem(String string) {
 		// TODO Auto-generated method stub
-		Image tileSet = new Image(string);
-		item = new Image[2];
-		for (int x=0;x<2;x++){
-			item[x] = new WritableImage(tileSet.getPixelReader(), x * sizeT, 16, sizeT, sizeT);
-		}
 		
 	}
 
 	private void ResMap(String string) {
 		// TODO Auto-generated method stub
-		  try {
-
-	            InputStream in = getClass().getResourceAsStream(string);
-	            BufferedReader br = new BufferedReader(
-	                    new InputStreamReader(in)
-	            );
-
-	            colsNum = Integer.parseInt(br.readLine());
-	            rowNum = Integer.parseInt(br.readLine());
-	            map = new int[rowNum][colsNum];
-
-	            String delims = "\\s+"; //regex expression
-	            for(int row = 0; row < rowNum; row++) {
-	                String line = br.readLine();
-	                String[] tokens = line.split(delims);
-	                for(int col = 0; col < colsNum; col++) {
-	                    map[row][col] = Integer.parseInt(tokens[col]);
-	                }
-	            }
-
-	        }
-	        catch(Exception expt) { 
-	            expt.printStackTrace();
-	        }
+		
 	}
 
 	private void ResTiles(String string) {
 		// TODO Auto-generated method stub
-		try {
-
-            Image setTile=new Image(string);
-            tilesAcr = (int) setTile.getWidth() / sizeT;
-            tile = new Image[2][tilesAcr];
-
-            for(int y = 0; y < tilesAcr; y++) {
-                tile[0][y] = new WritableImage(
-                        setTile.getPixelReader(),
-                        y * sizeT,
-                        0,
-                        sizeT,
-                        sizeT);
-                tile[1][y] = new WritableImage(
-                        setTile.getPixelReader(),
-                        y * sizeT,
-                        sizeT,
-                        sizeT,
-                        sizeT);
-            }
-
-        }
-        catch(Exception e) {
-            e.printStackTrace();
-        }
+		
 	}
 
 	private void generategraphics(GraphicsContext graphics1) {
 		// TODO Auto-generated method stub
-		for(int tilerow = 0; tilerow < 40; tilerow++){
-			if (tilerow >= rowNum) break;
-			for (int z=0;z<40;z++){
-				if (z>=colsNum) break;
-				if(map[tilerow][z]==0) continue;
-				
-				int rowcol = map[tilerow][z];
-				int row = rowcol / tilesAcr;
-				int col = rowcol % tilesAcr;
-				
-				graphics1.drawImage(tile[row][col], col * sizeT, row * sizeT);
-			}
-		}
+		
 	}
 
 	//FXML declarations here

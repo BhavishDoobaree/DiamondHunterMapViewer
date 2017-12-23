@@ -1,6 +1,6 @@
 package com.neet.DiamondHunter.MapViewer;
 
-
+@SuppressWarnings("serial")
 public class ExceptionHandler extends Exception {
 	
 	  String excptxt;
