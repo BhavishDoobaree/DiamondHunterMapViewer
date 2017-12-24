@@ -10,6 +10,19 @@
 		<item value="*" key="patterns"/>
 		<item value="false" key="updateTextualMatches"/>
 	</section>
+	<section name="FatJarPackageWizard">
+		<item value="C:\Users\Bhavish Doobaree\Desktop\UNMC\SWM\CW2\MapViewerCodes\GitHubRepo\g52swm-cw2-group11\DiamondHunterMapViewer" key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION"/>
+		<item value="MapEditor - DiamondHunterMapViewer" key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME"/>
+		<item value="DiamondHunterMapViewer\MapViewer.jar" key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION"/>
+		<item value="false" key="FatJarPackageWizardPage.ANTSCRIPT_SAVE"/>
+		<item value="1" key="FatJarPackageWizardPage.LIBRARY_HANDLING"/>
+		<list key="FatJarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="DiamondHunterMapViewer/MapViewer.jar"/>
+		</list>
+		<list key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION_HISTORY">
+			<item value=".xml"/>
+		</list>
+	</section>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item value="2" key="layout"/>
 		<item value="true" key="group_libraries"/>
