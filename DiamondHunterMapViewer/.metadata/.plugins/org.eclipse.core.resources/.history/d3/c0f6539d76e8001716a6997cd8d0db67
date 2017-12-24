@@ -71,7 +71,7 @@ public class MenuState extends GameState {
 			gsm.setState(GameStateManager.PLAY);
 		}
 		if(currentOption == 1) {
-			JFrame test = MainMenuController.getWindow();
+			JFrame test = MapmenuController.getWindow();
 			test.setVisible(false);
 		}
 	}
